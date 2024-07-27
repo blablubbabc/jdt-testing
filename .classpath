@@ -5,13 +5,13 @@
 	<classpathentry kind="src" path="src/main/resources"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21/">
 		<attributes>
-			<attribute name="annotationpath" value="/shopkeepers-external-annotations/src/main/resources"/>
+			<attribute name="annotationpath" value="/jdt-testing/src/main/resources"/>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.buildship.core.gradleclasspathcontainer">
 		<attributes>
-			<attribute name="annotationpath" value="/shopkeepers-external-annotations/src/main/resources"/>
+			<attribute name="annotationpath" value="/jdt-testing/src/main/resources"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="bin/default"/>

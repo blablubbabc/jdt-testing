@@ -25,7 +25,7 @@ java {
 }
 
 eclipse {
-	afterEvaluate {
+	afterEvaluate{
 		classpath {
 			// Link the External Eclipse Annotations (null checking):
 			containers "org.eclipse.buildship.core.gradleclasspathcontainer"
@@ -33,7 +33,7 @@ eclipse {
 				whenMerged { classpath ->
 					classpath.entries.forEach { entry ->
 						if (entry.kind == 'con') {
-							entry.entryAttributes.put("annotationpath", "/shopkeepers-external-annotations/src/main/resources")
+							entry.entryAttributes.put("annotationpath", "/jdt-testing/src/main/resources")
 						}
 					}
 				}
