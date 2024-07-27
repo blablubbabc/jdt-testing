@@ -1,0 +1,4 @@
+class org/bukkit/Registry
+get
+ (Lorg/bukkit/NamespacedKey;)TT;
+ (Lorg/bukkit/NamespacedKey;)T0T;

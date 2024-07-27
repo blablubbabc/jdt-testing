@@ -1,0 +1,43 @@
+plugins {
+	id 'java-library'
+	id 'eclipse'
+}
+
+repositories
+{
+	mavenLocal()
+	mavenCentral()
+	// Bukkit, Spigot-API
+	maven { url 'https://hub.spigotmc.org/nexus/content/groups/public/' }
+}
+
+dependencies {
+	api "org.eclipse.jdt:org.eclipse.jdt.annotation:2.3.0"
+	api "com.vegardit.no-npe:no-npe-eea-java-21:1.0.3"
+	compileOnly "org.bukkit:bukkit:1.20.6-R0.1-SNAPSHOT"
+
+	testImplementation "org.bukkit:bukkit:1.20.6-R0.1-SNAPSHOT"
+	testImplementation "junit:junit:4.13.1"
+}
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_21
+}
+
+eclipse {
+	afterEvaluate {
+		classpath {
+			// Link the External Eclipse Annotations (null checking):
+			containers "org.eclipse.buildship.core.gradleclasspathcontainer"
+			file {
+				whenMerged { classpath ->
+					classpath.entries.forEach { entry ->
+						if (entry.kind == 'con') {
+							entry.entryAttributes.put("annotationpath", "/shopkeepers-external-annotations/src/main/resources")
+						}
+					}
+				}
+			}
+		}
+	}
+}
