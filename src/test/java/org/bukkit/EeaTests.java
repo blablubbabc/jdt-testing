@@ -1,5 +1,7 @@
 package org.bukkit;
 
+import java.util.Map;
+
 import org.bukkit.entity.Frog;
 import org.eclipse.jdt.annotation.Nullable;
 
@@ -19,5 +21,8 @@ public class EeaTests {
 		// Eclipse warning: "Null comparison always yields false: The variable variant cannot be
 		// null at this location"
 		if (variant == null) return;
+
+		// Test annotating some Java type, such as Map.put: Works.
+		Class<?> map = Map.class;
 	}
 }
